@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mihir - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="your-photo.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #fff;
+            font-size: 18px;
+            max-width: 1200px;
+            margin: 30;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .content-section {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .photo-section {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            margin-left: auto;
+        }
+
+        .profile-photo {
+            width: 240px;
+            height: 240px;
+            border-radius: 60%;
+            object-fit: cover;
+        }
+
+        .header {
+            margin-bottom: 60px;
+        }
+
+        .bio {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .bio:last-child {
+            margin-bottom: 0;
+        }
+
+        .bio a {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        .bio a:hover {
+            color: #1a1a1a;
+        }
+
+        .footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            font-size: 18px;
+            color: #1a1a1a;
+        }
+
+        .footer a {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        .footer a:hover {
+            color: #1a1a1a;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        body.dark-mode .footer {
+            color: #ffffff;
+        }
+
+        body.dark-mode .bio a,
+        body.dark-mode .footer a {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .bio a:hover,
+        body.dark-mode .footer a:hover {
+            color: #ffffff !important;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 16px;
+            }
+            
+            .main-container {
+                flex-direction: column-reverse;
+                gap: 30px;
+            }
+
+            .content-section {
+                max-width: 100%;
+            }
+
+            .photo-section {
+                justify-content: center;
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            .profile-photo {
+                width: 180px;
+                height: 180px;
+            }
+
+            .header {
+                margin-bottom: 40px;
+            }
+
+            .footer {
+                margin-top: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+            }
+
+            .bio {
+                font-size: 16px;
+            }
+
+            .footer {
+                font-size: 16px;
+            }
+
+            .profile-photo {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-section">
+            <header class="header">
+                <div class="bio">
+                    hello! i'm mihir. i study cs and business at unc.
+                    <br> i'm interested in product, policy, strategy, and design. 
+                <div class="bio">
+                    <br> some of the projects i'm working on: <a href="https://newslettr-zeta.vercel.app/" target="_blank">newslettr</a> is an rss aggregator that helps limit time spent reading the news. 
+                    <br> docs can be found on my <a href="https://github.com/mihir-kale" target="_blank">github</a>. 
+                    <br> <br> stuff i'm reading and some notes. 
+                </div>
+            </header>
+
+            <footer class="footer">
+                <p>you can reach me at <a href="mailto:mpkale@unc.edu">mpkale@unc.edu</a> or on <a href="https://www.linkedin.com/in/mihirkaleclt/" target="_blank">linkedin</a>.</p>
+            </footer>
+        </div>
+        
+        <div class="photo-section">
+            <img src="your-photo.jpg" alt="Mihir" class="profile-photo">
+        </div>
+    </div>
+
+    <script>
+        // Add click anywhere to toggle dark mode
+        document.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
